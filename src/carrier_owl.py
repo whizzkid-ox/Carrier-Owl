@@ -53,7 +53,7 @@ def search_keyword(
     # ブラウザーを起動
     # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
     # driver = webdriver.Chrome(ChromeDriverManager().install(), options=options) # RS; changed webdriver to chrome
-    driver = webdriver.Chrome(ChromeDriverManager(version='114.0.5735.90').install(), options=options) # RS; changed webdriver to chrome
+    driver = webdriver.Chrome(ChromeDriverManager(version='126.0.6478').install(), options=options) # RS; changed webdriver to chrome
     
     for article in articles:
         url = article['arxiv_url']
