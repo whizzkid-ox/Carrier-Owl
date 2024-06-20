@@ -1,5 +1,5 @@
 from webdriver_manager.firefox import GeckoDriverManager
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.chrome import ChromeDriverManager # RS; import chrome driver
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.common.exceptions import NoSuchElementException
@@ -52,8 +52,7 @@ def search_keyword(
 
     # ブラウザーを起動
     # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
-    # driver = webdriver.Chrome(options=options)
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options) # RS; changed webdriver to chrome
     
     for article in articles:
         url = article['arxiv_url']
