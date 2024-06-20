@@ -1,7 +1,8 @@
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.chrome import ChromeDriverManager # RS; import chrome driver
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+# from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options # RS; import chrome driver
 from selenium.common.exceptions import NoSuchElementException
 import os
 import time
