@@ -25,7 +25,7 @@ jobs:
           poetry-version: 1.2.0
 
       - name: install dependencies
-        run: poetry install
+        run: poetry install --no-update
 
       - name: Run owl
         run:
