@@ -1,11 +1,28 @@
 # arxivの学問領域の指定
-subject: 'cat:cs.*'
+subject: cat:cs.* OR cat:q-bio.* OR stat.* OR eess.* OR econ.* OR physics.* OR math.* OR nlin.*
 
 # 検索キーワード
 keywords:
-        kaggle: 3
-        resnet: 3
-        anomaly detection: 1
+        consciousness: 1
+        consciouss: 1
+        awareness: 1
+        perception: 1
+        cognition: 1
+        metacognition: 1
+        prediction: 1
+        predictive coding: 1
+        active inference: 1
+        bayesian inference: 1
+        free energy principle: 1
+        neural architecture search: 2
+        inverse reinforcement learning: 1
+        fMRI: 1
+        EEG: 1
+        LFP: 1
+        psychiatry: 1
+        psychosis: 1
+        mood: 1
+        depression: 1
 
 # 通知の閾値
 score_threshold: 0
