@@ -173,13 +173,11 @@ def main():
     parser.add_argument('--slack_id', default=None)
     parser.add_argument('--line_token', default=None)
     args = parser.parse_args()
-    print("pass 1")
 
     config = get_config()
     subject = config['subject']
     keywords = config['keywords']
     score_threshold = float(config['score_threshold'])
-    print("pass 2")
 
     day_before_yesterday = datetime.datetime.today() - datetime.timedelta(days=2)
     day_before_yesterday_str = day_before_yesterday.strftime('%Y%m%d')
@@ -192,12 +190,10 @@ def main():
                            sort_by='submittedDate',
                            iterative=False)
     results = search_keyword(articles, keywords, score_threshold)
-    print("pass 3")
 
     slack_id = os.getenv("SLACK_ID") or args.slack_id
     line_token = os.getenv("LINE_TOKEN") or args.line_token
     notify(results, slack_id, line_token)
-    print("pass 4")
 
 
 if __name__ == "__main__":
