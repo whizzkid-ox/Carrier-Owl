@@ -1,8 +1,8 @@
 from webdriver_manager.firefox import GeckoDriverManager
-from webdriver_manager.chrome import ChromeDriverManager # RS; import chrome driver
+# from webdriver_manager.chrome import ChromeDriverManager # RS; import chrome driver
 from selenium import webdriver
-# from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.chrome.options import Options # RS; import chrome driver
+from selenium.webdriver.firefox.options import Options
+# from selenium.webdriver.chrome.options import Options # RS; import chrome driver
 from selenium.common.exceptions import NoSuchElementException
 import os
 import time
@@ -52,8 +52,8 @@ def search_keyword(
     options.add_argument('--headless')
 
     # ブラウザーを起動
-    # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options) # RS; changed webdriver to chrome
+    driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
+    # driver = webdriver.Chrome(ChromeDriverManager().install(), options=options) # RS; changed webdriver to chrome
     
     for article in articles:
         url = article['arxiv_url']
